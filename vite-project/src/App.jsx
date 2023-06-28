@@ -2,6 +2,7 @@ import { useState } from 'react'
 import Greeting from './components/Greeting'
 import LoginButton from './components/LoginButton'
 import LogoutButton from './components/LogoutButton'
+import Messages from './components/Messages'
 import './App.css'
 
 function App() {
@@ -14,7 +15,7 @@ function App() {
 
   let button
 
-  // THIS IS THE CONDITIONAL
+  // THIS IS THE CONDITIONAL STATEMENT
 
   if (isLoggedIn) {
     button = <LogoutButton 
