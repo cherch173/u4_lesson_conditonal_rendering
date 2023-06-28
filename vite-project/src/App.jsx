@@ -43,8 +43,9 @@ function App() {
       <Greeting
         isLoggedIn={isLoggedIn}
       />
-      {button}
+      <p>The user is <b>{isLoggedIn ? 'currently' : 'not'}</b> logged in</p>
       {messages}
+      {button}
     </div>
   )
 }
