@@ -29,8 +29,9 @@ function App() {
   return (
     <div className='App'>
       <Greeting
-        isLoggedIn={false}
+        isLoggedIn={isLoggedIn}
       />
+      {button}
     </div>
   )
 }
