@@ -9,11 +9,22 @@ function App() {
 
   const [isLoggedIn, toggleLogin]=useState(false)
 
+  const [unreadMessages, setUnreadMessages] = useState ([
+    'Hello humans. I am Lrr',
+    'of the Planet Omicron Persei Eight',
+    'and now...',
+    'Give me all your quarters',
+    'Quarters! We require quarters!'
+  ])
+
   const handleLoginClick = () => toggleLogin(true)
 
   const handleLogoutClick = () => toggleLogin(false)
 
   let button
+
+  const messages = !! isLoggedIn && <Messages 
+    unreadMessages={unreadMessages} />
 
   // THIS IS THE CONDITIONAL STATEMENT
 
@@ -33,6 +44,7 @@ function App() {
         isLoggedIn={isLoggedIn}
       />
       {button}
+      {messages}
     </div>
   )
 }
